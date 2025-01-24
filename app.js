@@ -16,8 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true,
+    origin: 'https://triplewsols-frontend-8kpzmsq5c-pratham182s-projects.vercel.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, 
   })
 );
 
