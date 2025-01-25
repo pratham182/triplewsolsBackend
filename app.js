@@ -16,12 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: 'https://triplewsols-frontend-8kpzmsq5c-pratham182s-projects.vercel.app/',
+    origin: 'https://triplewsols-frontend.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true, 
+    credentials: true,
   })
 );
 
+app.options('*', cors()); 
 
 app.use("/api", userRoutes);
 app.use("/api",adminRoutes)
